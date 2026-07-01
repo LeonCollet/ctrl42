@@ -363,7 +363,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 /* Helle Sektionen im Wechsel (Variablen-Override) */
 .sec.light{
   --surface:#ffffff;--surface-2:#f6f8f2;
-  --text:#141811;--muted:#59604f;--muted-2:#8b9280;
+  --text:#0a0a0a;--muted:#242424;--muted-2:#454545;
   --line:rgba(20,30,10,.14);--line-soft:rgba(20,25,10,.09);
   --accent:#5f8f16;--accent-dim:#4f7a10;--accent-glow:rgba(95,143,22,.26);
   background:#f3f5ef;color:var(--text);
@@ -380,6 +380,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 .picon{width:40px;height:40px;border-radius:11px;border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;color:var(--steel);margin-bottom:16px;background:rgba(255,255,255,.02)}
 .sec.light .picon{color:var(--steel-dim);background:rgba(20,30,10,.02)}
+.sec.light .eyebrow{color:#141414}
 .picon svg{width:20px;height:20px}
 
 .foot-brand{max-width:340px}
@@ -403,12 +404,59 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .bg-grad{background:linear-gradient(90deg,#070809 0%,#0b0d0e 42%,#181c1f 74%,#242a2e 100%)}
 
 /* Durchgehender Farbverlauf ueber die ganze Zone: EIN Verlauf auf dem Wrapper .valley (keine Knicke). Weiss-Enden weich in den Padding-Zonen der Nachbarn. */
-.valley{background:linear-gradient(180deg,#F4F5EF 0%,#656b73 50%,#F4F5EF 100%)}
+.valley{background:linear-gradient(180deg,#F4F5EF 0%,#8a9088 50%,#F4F5EF 100%)}
 .valley :is(h2,h3,.lead,p,.tn,.obj-q,.obj-a,.role,.big,.small,.pr){text-shadow:0 1px 2px rgba(255,255,255,.45)}
 #leistungen,#team,#einwaende{background:transparent}
 #ansatz{background:#F4F5EF;padding-bottom:126px}
 #einstieg{background:#F4F5EF;padding-top:126px}
 #ansatz,#einstieg{border:none}
+
+/* Team-Sektion: alternierende Profil-Zeilen + Kennzahlen als Frosted-Glass */
+#team .team{display:flex;flex-direction:column;gap:46px;margin-top:26px}
+#team .person{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center;background:none;border:none;box-shadow:none;border-radius:0;padding:0;overflow:visible}
+#team .person.rev{grid-template-columns:1.15fr .85fr}
+#team .person.rev .p-body{order:-1}
+#team .p-media{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid rgba(154,205,51,.28);background:linear-gradient(160deg,#161b24,#0d1015);display:flex;align-items:center;justify-content:center;box-shadow:0 26px 64px -34px rgba(0,0,0,.55)}
+#team .p-media img{width:100%;height:100%;object-fit:cover;display:block}
+#team .p-media .ph{display:flex;flex-direction:column;align-items:center;gap:12px;color:#8f978a;font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:22px}
+#team .p-media .ph .ico{width:54px;height:54px;border:1.5px solid rgba(154,205,51,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#9ACD33}
+#team .p-media .ph small{color:#6c7268;font-size:10px;letter-spacing:.1em;text-transform:none}
+#team .p-media .corner{position:absolute;width:20px;height:20px;opacity:.75}
+#team .p-media .corner.tl{top:14px;left:14px;border-top:2px solid #9ACD33;border-left:2px solid #9ACD33}
+#team .p-media .corner.br{bottom:14px;right:14px;border-bottom:2px solid #9ACD33;border-right:2px solid #9ACD33}
+#team .p-body{padding-left:28px;border-left:2px solid rgba(95,143,22,.55)}
+#team .p-id{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;color:#2f4708;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+#team .p-id i{width:7px;height:7px;border-radius:50%;background:#5f8f16;box-shadow:0 0 8px rgba(95,143,22,.6)}
+#team .person h3{color:#0a0a0a;font-size:clamp(22px,2.6vw,28px);margin:0;text-shadow:none}
+#team .person .pr{color:#2f4708;margin-top:8px;font-size:13px;text-shadow:none}
+#team .person p{color:#222222;font-size:15px;margin-top:16px;line-height:1.7;text-shadow:none;max-width:none}
+#team .stats{gap:18px;margin-top:18px}
+#team .stat{position:relative;overflow:hidden;text-align:left;background:rgba(15,19,25,.5);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:24px 22px;box-shadow:0 18px 44px -32px rgba(0,0,0,.4);transition:border-color .4s ease,transform .4s ease}
+#team .stat::before{content:"";position:absolute;bottom:12px;right:12px;width:13px;height:13px;border-bottom:1.5px solid rgba(154,205,51,.45);border-right:1.5px solid rgba(154,205,51,.45)}
+#team .stat:hover{border-color:rgba(154,205,51,.4);transform:translateY(-5px)}
+#team .stat .m-tag{display:block;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.14em;color:#9ACD33;margin-bottom:14px;text-shadow:none}
+#team .stat .big{color:#eef1ee;text-align:left;text-shadow:none;transition:text-shadow .4s ease}
+#team .stat:hover .big{text-shadow:0 0 22px rgba(154,205,51,.5)}
+#team .stat .lbl{color:#c3c8bd;text-align:left;margin-top:10px;text-shadow:none}
+
+/* Timeline (So starten wir): animierte Linie + Nodes oben, Cards darunter */
+.timeline{position:relative;margin-top:28px}
+.tl-track{position:absolute;top:19px;left:12.5%;right:12.5%;height:2px;background:rgba(10,10,10,.15)}
+.tl-fill{position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,#5f8f16,#9ACD33);box-shadow:0 0 12px rgba(154,205,51,.6);transition:width 1.9s cubic-bezier(.2,.7,.2,1) .2s}
+.timeline.in .tl-fill{width:100%}
+.tl-glow{position:absolute;top:16px;left:12%;width:74px;height:6px;border-radius:6px;background:radial-gradient(circle,rgba(154,205,51,.9),transparent 70%);opacity:0;pointer-events:none}
+.timeline.in .tl-glow{opacity:1;animation:tlsweep 3.6s ease-in-out 1s infinite}
+@keyframes tlsweep{0%{left:11%}50%{left:82%}100%{left:11%}}
+.tl-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:stretch}
+.tl-step{position:relative;padding-top:46px;display:flex;flex-direction:column}
+.tl-node{position:absolute;top:0;left:50%;transform:translateX(-50%);width:38px;height:38px;border-radius:50%;background:#5f8f16;color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:15px;z-index:2;box-shadow:0 0 0 5px rgba(95,143,22,.14),0 6px 16px -6px rgba(0,0,0,.4)}
+.tl-card{position:relative;overflow:hidden;flex:1 1 auto;background:linear-gradient(160deg,#151922,#0e1116);border:1px solid rgba(154,205,51,.20);border-radius:16px;padding:26px 24px;box-shadow:0 22px 55px -30px rgba(0,0,0,.45);transition:border-color .4s ease,transform .4s ease}
+.tl-card:hover{border-color:rgba(154,205,51,.5);transform:translateY(-6px)}
+.tl-ghost{position:absolute;top:8px;right:16px;font-family:var(--font-display);font-weight:800;font-size:54px;color:rgba(154,205,51,.08);line-height:1}
+.tl-kicker{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9ACD33;margin-bottom:12px;position:relative;z-index:1}
+.tl-card h3{font-family:var(--font-display);font-size:18px;font-weight:700;color:#f2f4ee;line-height:1.25;display:flex;flex-wrap:wrap;align-items:center;gap:8px;position:relative;z-index:1}
+.tl-card p{color:#adb3a6;font-size:14px;line-height:1.6;margin-top:10px;position:relative;z-index:1}
+.tl-badge{font-family:var(--font-display);font-weight:700;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#0a0d05;background:#9ACD33;padding:3px 8px;border-radius:20px}
 
 /* ---------- Responsive ---------- */
 @media(max-width:860px){
@@ -433,6 +481,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .bento{grid-template-columns:1fr}
   .btile.s2,.btile.s4{grid-column:auto}
   .feat-split{grid-template-columns:1fr;gap:42px}
+  #team .person{grid-template-columns:1fr;gap:22px}
+  #team .person.rev .p-body{order:0}
+  #team .p-body{padding-left:18px}
+  #team .stat{padding:20px}
+  .tl-track,.tl-glow{display:none}
+  .tl-steps{grid-template-columns:1fr;gap:16px}
+  .tl-step{padding-top:0;display:flex;flex-direction:column}
+  .tl-node{position:static;transform:none;margin-bottom:14px}
 }
 @media(max-width:480px){
   .stats{grid-template-columns:1fr}
@@ -652,16 +708,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
     <div class="team">
       <div class="person reveal">
-        <div class="ava">RS</div>
-        <h3>Dr. Rolf Schmid</h3>
-        <div class="pr">Strategie · Analyse · Architektur · Governance</div>
-        <p>Wissenschaftliche Tiefe und Architektur-DNA. Übersetzt komplexe Risikolagen in einen steuerbaren Prozess und in eine Sprache, die der Verwaltungsrat versteht.</p>
+        <div class="p-media">
+          <span class="corner tl"></span><span class="corner br"></span>
+          <!-- BILD: Porträt Dr. Rolf Schmid einsetzen (<img src="rolf.jpg" alt="Dr. Rolf Schmid">) -->
+          <div class="ph"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20c0-4 3.4-6.8 7.5-6.8S19.5 16 19.5 20"/></svg></span>Bild folgt<small>Dr. Rolf Schmid</small></div>
+        </div>
+        <div class="p-body">
+          <div class="p-id"><i></i>// PROFIL_01 · Verfügbar</div>
+          <h3>Dr. Rolf Schmid</h3>
+          <div class="pr">Strategie · Analyse · Architektur · Governance</div>
+          <p>Wissenschaftliche Tiefe und Architektur-DNA. Übersetzt komplexe Risikolagen in einen steuerbaren Prozess und in eine Sprache, die der Verwaltungsrat versteht.</p>
+        </div>
       </div>
-      <div class="person reveal d1">
-        <div class="ava">AD</div>
-        <h3>Antonio De Luca</h3>
-        <div class="pr">Betrieb · Verfügbarkeit · Umsetzung · MedTech</div>
-        <p>Operative IT-Führung in regulierten, hochverfügbaren Umgebungen, als Ex-Head-of-IT bei Lufthansa FlightNav Systems und Belimed. Kennt validierte Systeme, lange Lifecycle-Zyklen und die Realität im Maschinenraum von MedTech und Pharma.</p>
+      <div class="person rev reveal d1">
+        <div class="p-media">
+          <span class="corner tl"></span><span class="corner br"></span>
+          <!-- BILD: Porträt Antonio De Luca einsetzen (<img src="antonio.jpg" alt="Antonio De Luca">) -->
+          <div class="ph"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20c0-4 3.4-6.8 7.5-6.8S19.5 16 19.5 20"/></svg></span>Bild folgt<small>Antonio De Luca</small></div>
+        </div>
+        <div class="p-body">
+          <div class="p-id"><i></i>// PROFIL_02 · Verfügbar</div>
+          <h3>Antonio De Luca</h3>
+          <div class="pr">Betrieb · Verfügbarkeit · Umsetzung · MedTech</div>
+          <p>Operative IT-Führung in regulierten, hochverfügbaren Umgebungen, als Ex-Head-of-IT bei Lufthansa FlightNav Systems und Belimed. Kennt validierte Systeme, lange Lifecycle-Zyklen und die Realität im Maschinenraum von MedTech und Pharma.</p>
+        </div>
       </div>
     </div>
 
@@ -672,10 +742,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <h2 class="reveal d1" style="font-size:clamp(24px,3.4vw,34px)">Jeder Tag ohne Steuerung<br>kostet Sie Geld.</h2>
       </div>
       <div class="stats">
-        <div class="stat reveal"><div class="big" data-count="59" data-prefix="+" data-suffix="%">+0%</div><div class="lbl">Ransomware-Vorfälle in der Schweiz, H2/2025 ggü. Vorjahr</div></div>
-        <div class="stat reveal d1"><div class="big" data-count="113" data-prefix="+" data-suffix="%">+0%</div><div class="lbl">Anstieg Cyberangriffe in der Schweiz, Q1/2025</div></div>
-        <div class="stat reveal d2"><div class="big" data-count="325" data-prefix="" data-suffix="">0</div><div class="lbl">Cyber-Vorfälle ans BACS gemeldet seit Meldepflicht-Start 04/2025</div></div>
-        <div class="stat reveal d3"><div class="big" data-count="24" data-prefix="" data-suffix="h">0h</div><div class="lbl">BACS-Meldepflicht, ab H2/2026 mit Bussenregime</div></div>
+        <div class="stat reveal"><span class="m-tag">// RANSOMWARE</span><div class="big" data-count="59" data-prefix="+" data-suffix="%">+0%</div><div class="lbl">Ransomware-Vorfälle in der Schweiz, H2/2025 ggü. Vorjahr</div></div>
+        <div class="stat reveal d1"><span class="m-tag">// CYBERANGRIFFE</span><div class="big" data-count="113" data-prefix="+" data-suffix="%">+0%</div><div class="lbl">Anstieg Cyberangriffe in der Schweiz, Q1/2025</div></div>
+        <div class="stat reveal d2"><span class="m-tag">// BACS-MELDUNGEN</span><div class="big" data-count="325" data-prefix="" data-suffix="">0</div><div class="lbl">Cyber-Vorfälle ans BACS gemeldet seit Meldepflicht-Start 04/2025</div></div>
+        <div class="stat reveal d3"><span class="m-tag">// MELDEFRIST</span><div class="big" data-count="24" data-prefix="" data-suffix="h">0h</div><div class="lbl">BACS-Meldepflicht, ab H2/2026 mit Bussenregime</div></div>
       </div>
       <p class="stats-note reveal">Quellen: BACS-Halbjahresberichte 2025, KMU-Portal des Bundes. Beispiel produzierendes KMU: Ein Produktionsstillstand kostet 50'000 bis 100'000 CHF. Pro Tag.</p>
     </div>
@@ -722,22 +792,46 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <h2 class="reveal d1">Klein anfangen. Schnell wirksam. Steuerbar bleiben.</h2>
       <p class="lead reveal d2">Kein Monate-Projekt vorab. Wir beginnen dort, wo sofort Wirkung entsteht, und bauen den Prozess Schritt für Schritt aus.</p>
     </div>
-    <div class="flow">
-      <div class="fstep feat reveal">
-        <span class="badge">Empfohlen</span>
-        <div class="fn">01</div>
-        <h3>Security Assessment</h3>
-        <p>Sie bekommen einen klaren Blick auf Ihre Angriffsfläche und Risiken. Schnell, konkret, ohne grosses Vorprojekt. Ihr Einstieg auf der Detect-Stufe.</p>
-      </div>
-      <div class="fstep reveal d1">
-        <div class="fn">02</div>
-        <h3>Stabilisierung</h3>
-        <p>Die wirksamsten Massnahmen zuerst. Wir senken Ihr Risiko spürbar und schaffen eine belastbare Sicherheits-Baseline.</p>
-      </div>
-      <div class="fstep reveal d2">
-        <div class="fn">03</div>
-        <h3>Steuerung und Reifegrad</h3>
-        <p>Governance, Reporting und Roadmap. Sicherheit wird delegierbar, ohne Kontrollverlust, und ist jedes Quartal nachweisbar reifer.</p>
+    <div class="timeline reveal" id="timeline">
+      <div class="tl-track"><span class="tl-fill"></span></div>
+      <span class="tl-glow"></span>
+      <div class="tl-steps">
+        <div class="tl-step reveal">
+          <span class="tl-node">1</span>
+          <div class="tl-card">
+            <span class="tl-ghost">01</span>
+            <div class="tl-kicker">Schritt 01 · Detect</div>
+            <h3>Security Assessment <span class="tl-badge">Empfohlen</span></h3>
+            <p>Ein klarer Blick auf Ihre Angriffsfläche und Risiken. Schnell, konkret, ohne grosses Vorprojekt.</p>
+          </div>
+        </div>
+        <div class="tl-step reveal">
+          <span class="tl-node">2</span>
+          <div class="tl-card">
+            <span class="tl-ghost">02</span>
+            <div class="tl-kicker">Schritt 02 · Stabilize</div>
+            <h3>Stabilisierung</h3>
+            <p>Die wirksamsten Massnahmen zuerst. Ihr Risiko sinkt spürbar, mit einer belastbaren Sicherheits-Baseline.</p>
+          </div>
+        </div>
+        <div class="tl-step reveal">
+          <span class="tl-node">3</span>
+          <div class="tl-card">
+            <span class="tl-ghost">03</span>
+            <div class="tl-kicker">Schritt 03 · Control</div>
+            <h3>Steuerung &amp; Betrieb</h3>
+            <p>Governance, Reporting und laufender Managed-Security-Betrieb. Sie behalten den Überblick, jedes Quartal nachweisbar reifer.</p>
+          </div>
+        </div>
+        <div class="tl-step reveal">
+          <span class="tl-node">4</span>
+          <div class="tl-card">
+            <span class="tl-ghost">04</span>
+            <div class="tl-kicker">Schritt 04 · Evolve</div>
+            <h3>Architektur &amp; Resilienz</h3>
+            <p>Von wirksamen Services zur strategischen Sicherheitsarchitektur: langfristig belastbar, auditfest und zukunftssicher.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
