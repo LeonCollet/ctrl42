@@ -131,7 +131,7 @@ header.nav.scrolled{background:rgba(7,8,9,.82);backdrop-filter:blur(14px);border
 @keyframes gridmove{from{background-position:0 0}to{background-position:0 48px}}
 
 /* ---------- Hero ---------- */
-.hero{min-height:auto;display:flex;align-items:center;padding:148px 0 104px;position:relative;overflow:hidden}
+.hero{min-height:auto;display:flex;align-items:center;padding:148px 0 104px;position:relative;overflow:hidden;background:linear-gradient(90deg,#070809 0%,#0b0d0e 42%,#181c1f 74%,#242a2e 100%)}
 .hero .glowball{position:absolute;top:18%;right:-6%;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(154,205,51,.16),transparent 65%);filter:blur(20px);z-index:0;animation:pulse 7s ease-in-out infinite}
 .hero .glowball.two{top:auto;bottom:-10%;left:-10%;right:auto;width:420px;height:420px;background:radial-gradient(circle,rgba(154,205,51,.10),transparent 65%);animation-delay:2s}
 @keyframes pulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
@@ -400,6 +400,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @keyframes badgeStayC{0%{opacity:0;transform:translate(-50%,8px)}30%{opacity:1;transform:translate(-50%,0)}100%{opacity:1;transform:translate(-50%,0)}}
 @media(prefers-reduced-motion:reduce){.hbadge{opacity:1}.hbadge.b4{transform:translateX(-50%)}}
 
+.bg-grad{background:linear-gradient(90deg,#070809 0%,#0b0d0e 42%,#181c1f 74%,#242a2e 100%)}
+
+/* Durchgehender Farbverlauf ueber die ganze Zone: EIN Verlauf auf dem Wrapper .valley (keine Knicke). Weiss-Enden weich in den Padding-Zonen der Nachbarn. */
+.valley{background:linear-gradient(180deg,#F4F5EF 0%,#656b73 50%,#F4F5EF 100%)}
+.valley :is(h2,h3,.lead,p,.tn,.obj-q,.obj-a,.role,.big,.small,.pr){text-shadow:0 1px 2px rgba(255,255,255,.45)}
+#leistungen,#team,#einwaende{background:transparent}
+#ansatz{background:#F4F5EF;padding-bottom:126px}
+#einstieg{background:#F4F5EF;padding-top:126px}
+#ansatz,#einstieg{border:none}
+
 /* ---------- Responsive ---------- */
 @media(max-width:860px){
   .nav-links{position:fixed;top:0;right:0;height:100vh;width:74%;max-width:320px;background:var(--bg-soft);border-left:1px solid var(--line-soft);flex-direction:column;justify-content:center;align-items:flex-start;padding:0 36px;gap:28px;transform:translateX(100%);transition:transform .35s;z-index:90}
@@ -495,7 +505,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ TRUST / COMPLIANCE ============ -->
-<section class="trust" aria-label="Standards und Compliance">
+<section class="trust bg-grad" aria-label="Standards und Compliance">
   <div class="wrap trust-inner">
     <span class="trust-lead">Aufgebaut auf anerkannten Standards</span>
     <div class="trust-items">
@@ -509,7 +519,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ PROBLEM ============ -->
-<section class="sec" id="problem">
+<section class="sec bg-grad" id="problem">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Das eigentliche Problem</span>
@@ -549,7 +559,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ MECHANISM ============ -->
-<section class="sec mech" id="ansatz">
+<section class="sec mech light" id="ansatz">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Unser Modell</span>
@@ -590,6 +600,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ LEISTUNGEN ============ -->
+<div class="valley">
 <section class="sec light" id="leistungen">
   <div class="wrap">
     <div class="feat-split">
@@ -631,7 +642,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ TEAM / WHY ============ -->
-<section class="sec" id="team">
+<section class="sec light" id="team">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Warum CTRL 42</span>
@@ -672,7 +683,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ OBJECTIONS / KLARTEXT ============ -->
-<section class="sec obj" id="einwaende">
+<section class="sec obj light" id="einwaende">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Klartext</span>
@@ -701,6 +712,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ HOW TO START ============ -->
+</div><!-- /valley -->
+
 <section class="sec light" id="einstieg">
   <div class="wrap">
     <div class="sec-head">
@@ -731,7 +744,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="sec contact" id="kontakt">
+<section class="sec contact bg-grad" id="kontakt">
   <div class="glowball"></div>
   <div class="wrap contact-inner">
     <span class="eyebrow reveal">Kontakt</span>
