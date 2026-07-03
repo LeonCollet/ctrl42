@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CTRL 42 | Executive Cyber Resilience Day Rheintal</title>
+<meta name="description" content="Persönliche Einladung: Executive Cyber Resilience Day Rheintal, Donnerstag 17. September 2026, Businesshotel Forum Widnau AG. Detect. Stabilize. Control." />
+<meta name="theme-color" content="#070809" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23070809'/%3E%3Crect%20x='14.5'%20y='6.5'%20width='3'%20height='15'%20rx='1.5'%20fill='%239ACD33'/%3E%3Crect%20x='7'%20y='23'%20width='18'%20height='2.6'%20rx='1.3'%20fill='%239ACD33'/%3E%3C/svg%3E" />
+<style>
+:root{
+  --bg:#070809;--bg-soft:#0d0f10;--surface:#111413;--surface-2:#161a18;
+  --accent:#9ACD33;--accent-dim:#7ba428;--accent-glow:rgba(154,205,51,.45);
+  --text:#eef1ec;--muted:#8b938a;--muted-2:#5f665e;
+  --line:rgba(154,205,51,.16);--line-soft:rgba(255,255,255,.07);
+  --maxw:1150px;--font-display:'Orbitron',sans-serif;--font-body:'Inter',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--accent);color:#0a0a0a}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);display:inline-block}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.08;letter-spacing:-.01em}
+.accent{color:var(--accent)}
+.dsc{font-family:var(--font-display);font-weight:700;letter-spacing:.01em}
+.dsc .g{color:var(--accent);text-shadow:0 0 20px var(--accent-glow)}
+.divider-line{width:48px;height:2px;background:var(--accent);box-shadow:0 0 8px var(--accent-glow);margin:8px auto 0}
+
+/* NAV */
+header.nav{position:fixed;top:0;left:0;width:100%;z-index:100;transition:.3s;padding:18px 0;border-bottom:1px solid transparent}
+header.nav.scrolled{background:rgba(7,8,9,.85);backdrop-filter:blur(14px);border-color:var(--line-soft);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-weight:800;font-size:22px;color:#fff;display:inline-flex;align-items:flex-end;position:relative;padding-bottom:6px}
+.logo .bar{color:var(--accent);font-weight:500;margin:0 1px;transform:translateY(-1px)}
+.logo::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--accent);box-shadow:0 0 10px var(--accent-glow)}
+.nav-cta{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.04em;padding:11px 20px;border:1px solid var(--accent);border-radius:6px;color:#0a0d05;background:var(--accent);transition:.25s;text-decoration:none;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px var(--accent-glow)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:150px 0 80px;background:linear-gradient(90deg,#070809 0%,#0b0d0e 42%,#181c1f 74%,#242a2e 100%)}
+.grid-floor{position:absolute;inset:0;z-index:0;pointer-events:none}
+.grid-floor::before{content:"";position:absolute;bottom:-10%;left:-20%;width:140%;height:70%;background-image:linear-gradient(rgba(154,205,51,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(154,205,51,.09) 1px,transparent 1px);background-size:46px 46px;transform:perspective(420px) rotateX(62deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(to top,#000,transparent 80%);mask-image:linear-gradient(to top,#000,transparent 80%);animation:gridmove 14s linear infinite}
+@keyframes gridmove{from{background-position:0 0}to{background-position:0 46px}}
+.hero .glowball{position:absolute;top:12%;right:-6%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(154,205,51,.16),transparent 65%);z-index:0;animation:pulse 7s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.32fr .68fr;gap:44px;align-items:center}
+.hero-text{max-width:660px}
+.hero-media{position:relative;z-index:2}
+.hero-figure{position:relative;width:100%;aspect-ratio:4/5;max-height:560px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,var(--surface),var(--bg-soft));display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px -40px rgba(0,0,0,.85)}
+.hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-figure .ph{display:flex;flex-direction:column;align-items:center;gap:12px;color:var(--muted);font-family:var(--font-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:22px}
+.hero-figure .ph .ico{width:54px;height:54px;border:1.5px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.hero-figure .ph small{color:var(--muted-2);font-size:10px;letter-spacing:.1em;text-transform:none}
+.hero-figure .corner{position:absolute;width:30px;height:30px;opacity:.7}
+.hero-figure .corner.tl{top:16px;left:16px;border-top:2px solid var(--accent);border-left:2px solid var(--accent)}
+.hero-figure .corner.br{bottom:16px;right:16px;border-bottom:2px solid var(--accent);border-right:2px solid var(--accent)}
+.hero h1{font-size:clamp(30px,4.4vw,56px);margin:20px 0 0}
+.hero-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.meta-card{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.meta-card .ic{width:40px;height:40px;border-radius:10px;background:rgba(154,205,51,.1);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.meta-card .t{font-size:12px;color:var(--muted-2);letter-spacing:.04em;text-transform:uppercase;font-family:var(--font-display)}
+.meta-card .v{font-size:14px;color:var(--text);font-weight:500;margin-top:2px;white-space:nowrap}
+.hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:.05em;padding:15px 28px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:.25s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#0a0d05}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px -10px var(--accent-glow)}
+.hero .dsc-chip{margin-top:30px;display:inline-flex;align-items:center;gap:14px;font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:.06em;border:1px solid var(--line);border-radius:40px;padding:10px 22px;background:rgba(154,205,51,.04)}
+.hero .dsc-chip b{color:var(--accent);font-weight:700}
+.hero .dsc-chip .dot{width:4px;height:4px;border-radius:50%;background:var(--muted-2)}
+
+/* SECTIONS */
+.sec{padding:96px 0;position:relative}
+.sec.soft{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.sec-head{max-width:760px;margin:0 auto 48px;text-align:center}
+.sec-head h2{font-size:clamp(26px,3.8vw,40px);margin:16px 0 0}
+.sec-head .lead{color:var(--muted);font-size:17px;margin-top:18px;line-height:1.7}
+.intro p{font-size:clamp(16px,2vw,19px);color:var(--text);max-width:760px;line-height:1.75;margin:0 auto 20px;text-align:center}
+.intro p.mute{color:var(--muted)}
+.intro .claim{font-family:var(--font-display);font-weight:600;font-size:clamp(18px,2.4vw,24px);color:var(--accent);margin-top:8px}
+
+/* NUTZEN */
+.nutzen{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.nutzen .n{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line-soft);border-radius:14px;padding:24px 26px;transition:.3s}
+.nutzen .n:hover{border-color:var(--line);transform:translateY(-4px)}
+.nutzen .n .ic{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:rgba(154,205,51,.06);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.nutzen .n p{font-size:15.5px;line-height:1.55}
+.nutzen .n b{color:var(--text);font-weight:700}
+.nutzen .n span{color:var(--muted)}
+
+/* PROGRAMM timeline */
+.tl{position:relative;max-width:840px;margin:8px auto 0}
+.tl .line{position:absolute;left:29px;top:34px;bottom:34px;width:2px;background:rgba(255,255,255,.09)}
+.tl .fill{position:absolute;top:0;left:0;width:100%;height:0;background:var(--accent);box-shadow:0 0 10px var(--accent-glow);transition:height 2s cubic-bezier(.2,.7,.2,1) .2s}
+.tl.in .fill{height:100%}
+.tl-item{position:relative;display:grid;grid-template-columns:60px 1fr;gap:26px;padding:16px 0;align-items:start}
+.tl-node{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--accent);background:var(--bg);color:var(--accent);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:.4s}
+.tl-item:hover .tl-node{box-shadow:0 0 0 6px rgba(154,205,51,.1),0 0 22px -4px var(--accent-glow)}
+.tl-node svg{width:26px;height:26px}
+.tl-body{padding-top:6px}
+.tl-time{font-family:var(--font-display);font-weight:700;font-size:14px;color:var(--accent);margin-right:8px}
+.tl-body h3{font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--text);display:inline}
+.tl-body p{color:var(--muted);font-size:15px;line-height:1.6;margin-top:8px}
+.tl-body .who{color:var(--accent);font-weight:600}
+
+/* DECISION LAB */
+.lab{position:relative;overflow:hidden;background:linear-gradient(160deg,#141813,#0c0e0b);border:1px solid var(--line);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
+.lab::before{content:"";position:absolute;inset:0;border-radius:20px;padding:1px;background:linear-gradient(135deg,rgba(154,205,51,.5),transparent 45%,transparent 55%,rgba(154,205,51,.28));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.lab .lab-lock{width:66px;height:66px;border-radius:50%;background:#0a0d07;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:22px;box-shadow:0 0 26px -6px var(--accent-glow)}
+.lab .lab-lock svg{width:26px;height:26px}
+.lab h3{font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--text)}
+.lab .sub{color:var(--muted);font-size:15.5px;margin-top:14px;line-height:1.65}
+.lab .sub .hl{color:var(--accent)}
+.lab .rtitle{font-family:var(--font-display);font-weight:700;color:var(--text);font-size:17px;line-height:1.4;margin-bottom:18px}
+.lab ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+.lab li{display:flex;gap:12px;font-size:15px;color:var(--text);line-height:1.55}
+.lab li .ck{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#0a0d05;display:flex;align-items:center;justify-content:center}
+.lab li .ck svg{width:12px;height:12px}
+.lab .foot{margin-top:22px;font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--text);line-height:1.45}
+
+/* ANSATZ */
+.ansatz-h{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,4vw,40px);margin-bottom:6px;text-align:center}
+.ansatz-sub{color:var(--muted);margin-bottom:36px;text-align:center}
+.dsc-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dcol{background:var(--surface);border:1px solid var(--line-soft);border-radius:14px;padding:28px;transition:.3s}
+.dcol:hover{border-color:var(--line);transform:translateY(-5px)}
+.dcol .ic{width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:rgba(154,205,51,.06);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:16px}
+.dcol h4{font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--accent);margin-bottom:10px}
+.dcol p{color:var(--muted);font-size:14.5px;line-height:1.6}
+.pillbar{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:34px;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:14px;color:var(--text)}
+.pillbar span{display:inline-flex;align-items:center;gap:12px}
+.pillbar span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent-glow)}
+
+/* AUSKLANG */
+.ausklang{display:flex;align-items:center;gap:22px;background:var(--surface);border:1px solid var(--line-soft);border-radius:16px;padding:30px 32px;max-width:760px}
+.ausklang .ic{width:56px;height:56px;border-radius:14px;border:1px solid var(--line);background:rgba(154,205,51,.06);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0}
+.ausklang h3{font-family:var(--font-display);font-size:18px;margin-bottom:6px}
+.ausklang p{color:var(--muted);font-size:15px}
+
+/* CTA band */
+.ctaband{text-align:center}
+.ctaband h2{font-size:clamp(24px,3.6vw,38px)}
+.ctaband p{color:var(--muted);margin:16px auto 30px;max-width:560px}
+.ctaband .note{margin-top:18px;font-size:13px;color:var(--muted-2)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line-soft);padding:50px 0 40px;background:var(--bg-soft)}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-top .invite{color:var(--text);font-size:14px;max-width:340px;line-height:1.6}
+.foot-top .invite b{color:var(--accent)}
+.foot-co h4{font-family:var(--font-display);font-size:15px;color:var(--text);margin-bottom:8px}
+.foot-co p{color:var(--muted);font-size:13.5px;line-height:1.7}
+.foot-bottom{margin-top:40px;padding-top:22px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted-2);font-size:13px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
+
+@media(max-width:820px){
+  .nutzen,.dsc-cols,.lab,.hero-inner{grid-template-columns:1fr}
+  .hero-text{max-width:none}
+  .hero-media{max-width:360px;margin:0 auto}
+  .meta-card .v{white-space:normal}
+  .lab{padding:30px}
+  .ausklang{flex-direction:column;align-items:flex-start}
+  .sec{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">ctrl<span class="bar">|</span>42</a>
+    <a href="#anmeldung" class="nav-cta">Teilnahme bestätigen</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="grid-floor"></div><div class="glowball"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+    <span class="eyebrow reveal">Persönliche Einladung</span>
+    <h1 class="reveal d1">Executive Cyber<br>Resilience Day<br><span class="accent">Rheintal</span></h1>
+    <div class="hero-meta reveal d2">
+      <div class="meta-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4.5" width="18" height="17" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg></span>
+        <div><div class="t">Termin</div><div class="v">Donnerstag, 17. September 2026</div></div>
+      </div>
+      <div class="meta-card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <div><div class="t">Ort</div><div class="v">Businesshotel Forum Widnau AG · Bahnhofstrasse 24 · CH-9443 Widnau</div></div>
+      </div>
+    </div>
+    <span class="dsc-chip reveal d3"><b>Detect.</b><span class="dot"></span><b>Stabilize.</b><span class="dot"></span><b>Control.</b></span>
+    <div class="hero-cta reveal d3">
+      <a href="#anmeldung" class="btn btn-primary">Teilnahme bestätigen &rarr;</a>
+      <a href="#programm" class="btn" style="border-color:var(--line);color:var(--text)">Zum Programm</a>
+    </div>
+    </div><!-- /hero-text -->
+    <div class="hero-media reveal d2">
+      <figure class="hero-figure">
+        <span class="corner tl"></span><span class="corner br"></span>
+        <!-- BILD: Foto von Antonio & Dr. Rolf Schmid einsetzen -->
+        <div class="ph"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.4"/><path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5M15 19c0-2 1.2-3.6 3.5-3.6S22 17 22 19"/></svg></span>Bild folgt<small>Antonio &amp; Dr. Rolf Schmid</small></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="sec intro">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Worum es geht</span><div class="divider-line"></div></div>
+    <p class="reveal">Cyber-Sicherheit ist heute längst keine reine IT-Aufgabe mehr. Sie ist eine <span class="accent">Führungsaufgabe</span>.</p>
+    <p class="mute reveal d1">Entscheidend ist, wie gut ein Unternehmen vorbereitet ist, welche Entscheidungen im Ernstfall getroffen werden – und wie schnell es sich wieder stabilisiert.</p>
+    <p class="mute reveal d1">An unserem Executive Cyber Resilience Day diskutieren wir mit Ihnen praxisnah, auf Augenhöhe und mit klarem Nutzen für Ihr Unternehmen.</p>
+    <p class="mute reveal d2">Mit Impulsen aus der Praxis. Mit Erfahrung aus realen Projekten. Und im Austausch mit Entscheidern aus der Region.</p>
+    <p class="claim reveal d2">Klar. Praxisnah. Auf Augenhöhe.</p>
+  </div>
+</section>
+
+<!-- NUTZEN -->
+<section class="sec soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ihr Nutzen in 20 Sekunden</span>
+      <div class="divider-line"></div>
+    </div>
+    <div class="nutzen">
+      <div class="n reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><p><b>Sie erkennen</b> <span>die entscheidenden Angriffsflächen Ihres Unternehmens.</span></p></div>
+      <div class="n reveal d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span><p><b>Sie erhalten</b> <span>eine priorisierte Roadmap für die nächsten 6–12 Monate.</span></p></div>
+      <div class="n reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p><b>Sie unterscheiden</b> <span>wirksame Massnahmen von kostspieligem Aktionismus.</span></p></div>
+      <div class="n reveal d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span><p><b>Sie erfahren,</b> <span>wie Sie mit einem überschaubaren Budget maximale Wirkung erzielen.</span></p></div>
+      <div class="n reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5S15 16.7 15 20M15.5 20c0-2.2 1.3-3.8 3.5-3.8s3 1.6 3 3.8"/></svg></span><p><b>Sie erleben,</b> <span>wie Cyber-Sicherheit für Geschäftsleitung und IT gemeinsam steuerbar wird.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMM -->
+<section class="sec" id="programm">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Programm</span>
+      <div class="divider-line"></div>
+      <h2>Der Nachmittag im Überblick.</h2>
+    </div>
+    <div class="tl reveal" id="tl">
+      <span class="line"><span class="fill"></span></span>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11h13a3 3 0 0 1 0 6H4z"/><path d="M17 11a3 3 0 0 1 3-3M8 4v2M12 4v2"/></svg></span>
+        <div class="tl-body"><span class="tl-time">11:30 Uhr</span><h3>Steh-Lunch</h3><p>und persönliches Kennenlernen.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></span>
+        <div class="tl-body"><h3>Begrüssung</h3><p><span class="who">Vizekanzler a.D. Huber Gorbach</span> eröffnet den Nachmittag und moderiert durch das Programm.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg></span>
+        <div class="tl-body"><h3>Cyber-Resilienz als Führungsaufgabe</h3><p><span class="who">Dr. Rolf Schmid</span> zeigt einen strukturierten Entscheidungsprozess, mit dem Cyber-Sicherheit für Geschäftsleitung und Verwaltungsrat steuerbar wird.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></span>
+        <div class="tl-body"><h3>Die erste Schutzschicht</h3><p><span class="who">Avi Kravitz</span> stellt Blue Shield Umbrella vor – eine DNS-basierte Schutzschicht, die Angriffe stoppt, bevor sie das Unternehmen erreichen.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M6 7h12M5 7l-2.5 6h5L5 7zM19 7l-2.5 6h5L19 7z"/></svg></span>
+        <div class="tl-body"><h3>Rechtliche Perspektive</h3><p><span class="who">Theresa Prodinger</span> beleuchtet Verantwortung, Governance und Haftung – und warum Cyber-Resilienz heute auch juristische Realität ist.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 11h13a3 3 0 0 1 0 6H4z"/><path d="M17 11a3 3 0 0 1 3-3M8 4v2M12 4v2"/></svg></span>
+        <div class="tl-body"><h3>Kaffeepause</h3></div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3l2 5a4 4 0 0 0 8 0l-2-5M9 20l3-8 3 8M8 20h8"/><path d="M18 4l3 2-2 3"/></svg></span>
+        <div class="tl-body"><h3>Ausklang &middot; Gemeinsamer Apéro riche</h3><p>mit Zeit für Gespräche, Erfahrungsaustausch und persönliche Fragen.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION LAB -->
+<section class="sec soft">
+  <div class="wrap">
+    <div class="lab reveal">
+      <div>
+        <div class="lab-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <h3>CTRL42 Executive Decision Lab&trade;</h3>
+        <p class="sub"><span class="hl">Eine interaktive</span> Cyber-Sicherheits-Simulation für Geschäftsleitungen und IT-Verantwortliche – <span class="hl">durchgeführt im Stil eines Cyber Security Escape Rooms.</span></p>
+      </div>
+      <div>
+        <div class="rtitle">Wir erleben gemeinsam einen Cyberangriff anhand eines realen Vorfalls.</div>
+        <ul>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Alle Teilnehmer sind Teil des Abwehr-Teams.</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Durch gute Fragen und gemeinsame Überlegungen erleben Sie den Angriff und das, was in der Realität passiert.</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>Ziel: sensibilisiert statt verunsichert – und bereit für die richtigen Entscheidungen.</li>
+        </ul>
+        <div class="foot">Es verdeutlicht die Nähe von Cyberangriffen zu Ihrem realen Unternehmen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANSATZ -->
+<section class="sec soft">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Unser Ansatz</span><div class="divider-line"></div></div>
+    <div class="ansatz-h reveal d1 dsc">Detect. <span class="g">Stabilize.</span> Control.</div>
+    <div class="ansatz-sub reveal d1">Ein integrierter Ansatz für Schweizer Unternehmen.</div>
+    <div class="dsc-cols">
+      <div class="dcol reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span><h4>Detect</h4><p>Frühwarnsysteme, DNS-basierte Abwehr, Darknet-Monitoring.</p></div>
+      <div class="dcol reveal d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h4>Stabilize</h4><p>ASM, smarte MFA, Device Encryption, Reduktion der Angriffsfläche.</p></div>
+      <div class="dcol reveal d2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h10M18 8h2M4 16h2M10 16h10"/><circle cx="16" cy="8" r="2.2"/><circle cx="8" cy="16" r="2.2"/></svg></span><h4>Control</h4><p>Klare Prioritäten, überprüfbare Massnahmen, echter Security Lifecycle.</p></div>
+    </div>
+    <div class="pillbar reveal d2"><span>Durchdacht statt überladen</span><span>Substanz statt Versprechen</span><span>Nachvollziehbar statt Theorie</span></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec ctaband" id="anmeldung">
+  <div class="wrap">
+    <span class="eyebrow reveal">Teilnahme</span>
+    <h2 class="reveal d1" style="margin-top:14px">Wir freuen uns auf Sie.</h2>
+    <p class="reveal d2">Bestätigen Sie Ihre Teilnahme am Executive Cyber Resilience Day Rheintal – Donnerstag, 17. September 2026 in Widnau.</p>
+    <a href="mailto:kontakt@ctrl42.ch?subject=Teilnahme%20Executive%20Cyber%20Resilience%20Day%20Rheintal" class="btn btn-primary reveal d2">Teilnahme bestätigen &rarr;</a>
+    <p class="note reveal d3">Diese Veranstaltung findet ausschliesslich auf persönliche Einladung statt.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#top" class="logo" style="font-size:24px">ctrl<span class="bar">|</span>42</a>
+        <p class="invite" style="margin-top:16px">Diese Veranstaltung findet <b>ausschliesslich auf persönliche Einladung</b> statt.</p>
+      </div>
+      <div class="foot-co">
+        <h4>CTRL 42 AG</h4>
+        <p>AI · Cyber Security · Managed Security Services<br>Schaffhausen · Schweiz</p>
+      </div>
+      <div class="foot-co">
+        <h4>Veranstaltungsort</h4>
+        <p>Businesshotel Forum Widnau AG<br>Bahnhofstrasse 24 · CH-9443 Widnau<br>Donnerstag, 17. September 2026</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CTRL 42 AG</span>
+      <span class="dsc">Detect. <span class="g">Stabilize.</span> Control.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const tl=document.getElementById('tl');
+if(tl){const t=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){tl.classList.add('in');t.unobserve(tl)}}),{threshold:.15});t.observe(tl);}
+</script>
+</body>
+</html>
