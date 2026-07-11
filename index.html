@@ -437,7 +437,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 #leistungen :is(h2,h3,.lead,p,.tn){text-shadow:none}
 #team{background:#F5F6F0}
 #einwaende{background:#E6E9E0}
-#ansatz{background:#F5F6F0;padding-bottom:126px}
+#problem{background:#F5F6F0}
+#ansatz{padding-bottom:126px}
 #einstieg{background:#F5F6F0;padding-top:126px}
 #ansatz,#einstieg{border:none}
 #kontakt .hero-media{width:100%;max-width:380px}
@@ -522,9 +523,37 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .tl-step{padding-top:0;display:flex;flex-direction:column}
   .tl-node{position:static;transform:none;margin-bottom:14px}
 }
+@media(max-width:860px){
+  /* Hero: leichter Farbverlauf statt Bild (Mobil) */
+  .hero{background:linear-gradient(158deg,#070809 0%,#101316 52%,#262c31 100%)}
+  .hero-text{text-align:center}
+  .hero-tags,.hero-cta,.hero-proof,.hero-trust{justify-content:center}
+  .hero .sub{margin-left:auto;margin-right:auto}
+  /* Headlines kompakt: erzwungene Umbrueche aus, kleinere Schrift */
+  .hero h1{font-size:25px;line-height:1.2}
+  .sec-head h2{font-size:26px;line-height:1.22}
+  .feat-left h2{font-size:24px;line-height:1.2}
+  .hero h1 br,.hero .sub br,.sec-head h2 br,.feat-left h2 br{display:none}
+  /* Inhalte zentrieren */
+  .feat-left{text-align:center}
+  .feat-left .lead{margin-left:auto;margin-right:auto}
+  .feat-tiles{grid-template-columns:1fr;justify-items:center}
+  .ftile{text-align:center}
+  .ftile .fico{margin-left:auto;margin-right:auto}
+  .pcard{text-align:center}
+  .pcard .picon{margin-left:auto;margin-right:auto}
+  .btile{text-align:center}
+  .btile .tico{margin-left:auto;margin-right:auto}
+  #team .p-body{text-align:center}
+  #team .p-id{justify-content:center}
+  .tl-card{text-align:center}
+}
 @media(max-width:480px){
   .stats{grid-template-columns:1fr}
   form{padding:24px}
+  .hero h1{font-size:22px}
+  .sec-head h2{font-size:23px}
+  .feat-left h2{font-size:22px}
 }
 </style>
 </head>
@@ -586,7 +615,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 
 <!-- ============ PROBLEM ============ -->
-<section class="sec bg-grad" id="problem">
+<section class="sec light" id="problem">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Das eigentliche Problem</span>
@@ -626,7 +655,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 </section>
 
 <!-- ============ MECHANISM ============ -->
-<section class="sec mech light" id="ansatz">
+<section class="sec mech bg-grad" id="ansatz">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal">Unser Modell</span>
