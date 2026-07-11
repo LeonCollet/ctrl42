@@ -522,13 +522,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .btile.s2,.btile.s4{grid-column:auto}
   .feat-split{grid-template-columns:1fr;gap:42px}
   #team .person{grid-template-columns:1fr;gap:22px}
+  #team .person,
+  #team .person.rev{grid-template-columns:1fr}
   #team .person.rev .p-body{order:0}
-  #team .p-body{padding-left:18px}
+  #team .p-body{padding-left:0;border-left:none}
   #team .stat{padding:20px}
   .tl-track,.tl-glow{display:none}
   .tl-steps{grid-template-columns:1fr;gap:16px}
   .tl-step{padding-top:0;display:flex;flex-direction:column}
-  .tl-node{position:static;transform:none;margin-bottom:14px}
+  .tl-node{display:none}
 }
 @media(max-width:860px){
   /* Hero: leichter Farbverlauf statt Bild (Mobil) */
@@ -540,7 +542,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .hero h1{font-size:25px;line-height:1.2}
   .sec-head h2{font-size:26px;line-height:1.22}
   .feat-left h2{font-size:24px;line-height:1.2}
-  .hero h1 br,.hero .sub br,.sec-head h2 br,.feat-left h2 br{display:none}
   /* Inhalte zentrieren */
   .feat-left{text-align:center}
   .feat-left .lead{margin-left:auto;margin-right:auto}
@@ -554,6 +555,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   #team .p-body{text-align:center}
   #team .p-id{justify-content:center}
   .tl-card{text-align:center}
+}
+@media(max-width:860px){
+  /* Timeline-Kachel: Headline + Badge zentriert */
+  .tl-card h3{justify-content:center}
+  .tl-kicker{text-align:center}
+  /* Kontaktformular: Felder linksbuendig unter den Labels */
+  #kontakt .contact-main,#kontakt form,#kontakt .field{text-align:left}
+  #kontakt .field label{display:block;text-align:left}
+  #kontakt input,#kontakt textarea{width:100%;box-sizing:border-box;margin:0}
+  /* Zeilenumbrueche: keine Einzelwoerter in letzter Zeile */
+  h1,h2,h3,.lead,.sub,p,.tl-card p,.pcard p,.btile p{text-wrap:pretty}
+  .hero h1,.sec-head h2,.feat-left h2,#team .person h3,.pcard h3,.btile h3,.ftile h3{text-wrap:balance}
 }
 @media(max-width:480px){
   .stats{grid-template-columns:1fr}
