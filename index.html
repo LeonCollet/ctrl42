@@ -385,6 +385,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .trust-item{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-size:13px;letter-spacing:.03em;color:var(--muted);font-weight:600}
 .trust-item svg{width:15px;height:15px;color:var(--accent);flex-shrink:0}
 .hero-trust{display:flex;flex-wrap:wrap;gap:12px 22px;margin-top:24px}
+.hero-mobimg,.tb-break{display:none}
 .hero-trust .trust-item{color:rgba(232,235,230,.92);text-shadow:0 1px 8px rgba(0,0,0,.55)}
 
 /* Helle Sektionen im Wechsel (Variablen-Override) */
@@ -540,7 +541,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .hero-tags,.hero-cta,.hero-proof,.hero-trust{justify-content:center}
   .hero .sub{margin-left:auto;margin-right:auto}
   /* Headlines kompakt: erzwungene Umbrueche aus, kleinere Schrift */
-  .hero h1{font-size:30px;line-height:1.18}
+  .hero h1{font-size:26px;line-height:1.2}
   .sec-head h2{font-size:26px;line-height:1.22}
   .feat-left h2{font-size:24px;line-height:1.2}
   /* Inhalte zentrieren */
@@ -580,15 +581,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media(max-width:860px){
   .scroll-cue{bottom:12px}
   .hero-tags .tag:nth-child(3){display:none}
-  .hero-trust{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:12px 18px}
   #ansatz{padding-bottom:60px}
   #einstieg{padding-top:60px}
   .sec-head{margin-bottom:38px}
 }
+@media(max-width:860px){
+  .hero-mobimg{display:block;width:100%;aspect-ratio:16/9;background:url('assets/bg.jpg?v=2') center/cover no-repeat;border-radius:14px;margin:22px 0 6px;border:1px solid rgba(255,255,255,.08)}
+  .tb-break{display:block;flex-basis:100%;width:100%;height:0;margin:0}
+}
 @media(max-width:480px){
   .stats{grid-template-columns:1fr}
   form{padding:24px}
-  .hero h1{font-size:27px}
+  .hero h1{font-size:24px}
   .sec-head h2{font-size:23px}
   .feat-left h2{font-size:22px}
 }
@@ -629,6 +633,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
     <span class="eyebrow reveal">Managed Security für Schweizer KMU</span>
     <h1 class="reveal d1">Endlich Klarheit, wie sicher<br>Ihr Unternehmen wirklich ist.<span class="l2 glow">Sichtbar. Stabil. Steuerbar.</span></h1>
+    <div class="hero-mobimg" aria-hidden="true"></div>
     <p class="sub reveal d2">Wir machen Cyberrisiken sichtbar, stabilisieren Ihre Lage in Wochen und machen Sicherheit dauerhaft steuerbar. Mit einem gelebten Prozess statt einer weiteren Tool-Landschaft.</p>
     <div class="hero-cta reveal d3">
       <a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">→</span></a>
@@ -639,6 +644,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>NIS2</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>ISO 27001</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>DSG</span>
+      <span class="tb-break" aria-hidden="true"></span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>DSGVO</span>
       <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Swiss Made</span>
     </div>
