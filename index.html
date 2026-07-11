@@ -115,7 +115,8 @@ header.nav.scrolled{background:rgba(7,8,9,.82);backdrop-filter:blur(14px);border
 .nav-links a:hover::after{width:100%}
 .nav-cta{font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.04em;padding:11px 20px;border:1px solid rgba(255,255,255,.30);border-radius:10px;color:rgba(240,242,238,.95);transition:.25s;text-shadow:0 1px 10px rgba(0,0,0,.55)}
 .nav-cta:hover{background:var(--accent);color:#0a0d05;border-color:var(--accent)}
-.sec-cta{margin-top:52px;display:flex;justify-content:center}
+.sec-cta{margin-top:52px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.sec-cta-note{font-size:13px;color:var(--muted-2);max-width:460px;text-align:center;line-height:1.5;margin:0}
 .menu-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;flex-direction:column;gap:5px}
 .menu-toggle span{width:24px;height:2px;background:var(--text);display:block;transition:.3s}
 
@@ -249,7 +250,7 @@ header.nav.scrolled{background:rgba(7,8,9,.82);backdrop-filter:blur(14px);border
 .contact-head .lead{margin:18px auto 0}
 .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:stretch}
 .contact-main{min-width:0}
-@media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:32px}#kontakt .hero-media{display:none}}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:32px}#kontakt .hero-media{width:100%;max-width:320px;margin:8px auto 0}#kontakt .hero-figure{height:340px}}
 .contact h2{font-size:clamp(30px,4.6vw,50px);margin:18px 0 0}
 .contact .lead{color:var(--muted);font-size:18px;margin:22px 0 40px;line-height:1.7}
 form{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:38px}
@@ -568,6 +569,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   h1,h2,h3,.lead,.sub,p,.tl-card p,.pcard p,.btile p{text-wrap:pretty}
   .hero h1,.sec-head h2,.feat-left h2,#team .person h3,.pcard h3,.btile h3,.ftile h3{text-wrap:balance}
 }
+@media(max-width:860px){
+  .foot-top{flex-direction:column;align-items:center;text-align:center}
+  .foot-brand{max-width:none}
+  .foot-brand .logo-link{justify-content:center}
+  .foot-top .tag-line{margin-left:auto;margin-right:auto}
+  .foot-links{justify-content:center;text-align:center;gap:30px 44px}
+  .foot-bottom{flex-direction:column;justify-content:center;text-align:center}
+}
 @media(max-width:480px){
   .stats{grid-template-columns:1fr}
   form{padding:24px}
@@ -712,7 +721,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <p>Genau dafür sind wir gebaut: ein Security Operating Model für Unternehmen ohne eigene Sicherheitsabteilung.</p>
       </div>
     </div>
-    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a></div>
+    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a><p class="sec-cta-note">Sehen Sie in einem kurzen Erstgespräch, wie der Prozess bei Ihnen konkret greift. Unverbindlich.</p></div>
   </div>
 </section>
 
@@ -755,7 +764,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         </figure>
       </div>
     </div>
-    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a></div>
+    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a><p class="sec-cta-note">Machen Sie Ihre Sicherheitslage zur klaren Kennzahl, statt sie zu erahnen. Kostenlos besprechen.</p></div>
   </div>
 </section>
 
@@ -894,7 +903,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         </div>
       </div>
     </div>
-    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a></div>
+    <div class="sec-cta reveal"><a href="#kontakt" class="btn btn-primary">Gespräch anfragen <span class="arrow">&rarr;</span></a><p class="sec-cta-note">Wir starten pro Quartal nur wenige neue Projekte. Wer 2027 sauber planen will, beginnt jetzt.</p></div>
   </div>
 </section>
 
