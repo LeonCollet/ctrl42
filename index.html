@@ -134,7 +134,7 @@ header.nav.scrolled{background:rgba(7,8,9,.82);backdrop-filter:blur(14px);border
 @keyframes gridmove{from{background-position:0 0}to{background-position:0 48px}}
 
 /* ---------- Hero ---------- */
-.hero{min-height:92vh;display:flex;align-items:center;padding:120px 0 90px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(5,6,7,.92) 0%,rgba(5,6,7,.5) 9%,rgba(5,6,7,0) 26%,rgba(5,6,7,0) 56%,rgba(5,6,7,.4) 82%,rgba(5,6,7,.78) 100%),radial-gradient(105% 80% at 80% 46%,rgba(5,6,7,0) 36%,rgba(5,6,7,.1) 60%,rgba(5,6,7,.34) 100%),linear-gradient(90deg,rgba(6,7,8,.72) 0%,rgba(6,7,8,.42) 34%,rgba(6,7,8,.1) 52%,rgba(6,7,8,0) 66%),url('assets/bg.jpg') center right/cover no-repeat,#070809}
+.hero{min-height:92vh;display:flex;align-items:center;padding:120px 0 90px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(5,6,7,.92) 0%,rgba(5,6,7,.5) 9%,rgba(5,6,7,0) 26%,rgba(5,6,7,0) 56%,rgba(5,6,7,.4) 82%,rgba(5,6,7,.78) 100%),radial-gradient(105% 80% at 80% 46%,rgba(5,6,7,0) 36%,rgba(5,6,7,.1) 60%,rgba(5,6,7,.34) 100%),linear-gradient(90deg,rgba(6,7,8,.72) 0%,rgba(6,7,8,.42) 34%,rgba(6,7,8,.1) 52%,rgba(6,7,8,0) 66%),url('assets/bg.jpg?v=2') center right/cover no-repeat,#070809}
 .hero .grid-floor,.hero .glowball{display:none}
 .hero .glowball{position:absolute;top:18%;right:-6%;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(154,205,51,.16),transparent 65%);filter:blur(20px);z-index:0;animation:pulse 7s ease-in-out infinite}
 .hero .glowball.two{top:auto;bottom:-10%;left:-10%;right:auto;width:420px;height:420px;background:radial-gradient(circle,rgba(154,205,51,.10),transparent 65%);animation-delay:2s}
@@ -449,6 +449,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 #team .person.rev .p-body{order:-1}
 #team .p-media{position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid rgba(154,205,51,.28);background:linear-gradient(160deg,#161b24,#0d1015);display:flex;align-items:center;justify-content:center;box-shadow:0 26px 64px -34px rgba(0,0,0,.55)}
 #team .p-media img{width:100%;height:100%;object-fit:cover;display:block}
+#team .person.rev .p-media img{object-position:center 16%}
 #team .p-media .ph{display:flex;flex-direction:column;align-items:center;gap:12px;color:#8f978a;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:22px}
 #team .p-media .ph .ico{width:54px;height:54px;border:1.5px solid rgba(154,205,51,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#9ACD33}
 #team .p-media .ph small{color:#6c7268;font-size:10px;letter-spacing:.1em;text-transform:none}
@@ -734,14 +735,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div class="person rev reveal d1">
         <div class="p-media">
           <span class="corner tl"></span><span class="corner br"></span>
-          <!-- BILD: Porträt Antonio De Luca einsetzen (<img src="antonio.jpg" alt="Antonio De Luca">) -->
-          <div class="ph"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20c0-4 3.4-6.8 7.5-6.8S19.5 16 19.5 20"/></svg></span>Bild folgt<small>Antonio De Luca</small></div>
+          <img src="assets/antonio.jpg" alt="Antonio De Luca" loading="lazy" />
         </div>
         <div class="p-body">
           <div class="p-id"><i></i>// PROFIL_02 · Verfügbar</div>
           <h3>Antonio De Luca</h3>
-          <div class="pr">Betrieb · Verfügbarkeit · Umsetzung · MedTech</div>
-          <p>Operative IT-Führung in regulierten, hochverfügbaren Umgebungen, als früherer Leiter Datacenter bei Belimed. Kennt validierte Systeme, lange Lifecycle-Zyklen und die Realität im Maschinenraum von MedTech und Pharma.</p>
+          <div class="pr">Betrieb · Hochverfügbarkeit · Sicherheitskritische Systeme · Aviatik</div>
+          <p>Strategische und operative IT-Führung in der Aviatik. 18 Jahre Erfahrung als IT-Leiter bei der Lufthansa (Schwerpunkt: Navigationskarten-Herstellung). Spezialist für hochverfügbare, sicherheitskritische Systeme, komplexe IT-Infrastrukturen und die besonderen regulatorischen Anforderungen in der Luftfahrt.</p>
         </div>
       </div>
     </div>
